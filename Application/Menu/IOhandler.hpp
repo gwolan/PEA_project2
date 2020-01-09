@@ -1,9 +1,6 @@
 #pragma once
 
 #include <string>
-#include <vector>
-#include <memory>
-#include <Application/Menu/Actions/BaseAction.hpp>
 
 
 class IOhandler
@@ -15,13 +12,9 @@ class IOhandler
     void printMenu();
     bool readMenuSelection();
     char getCurrentMenuSelection();
-    BaseAction* getSelectedAction();
 
 
     private:
-    bool validateInput();
-
-    std::unique_ptr<BaseAction> selectedAction;
     char currentSelection;
     const std::string menu;
 };

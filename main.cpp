@@ -12,8 +12,9 @@ int main()
                             std::string("3. Wyświetl graf.\n") +
                             std::string("4. Wykonaj przegląd zupełny.\n") +
                             std::string("5. Wykonaj algorytm podzialu i ograniczen.\n") +
-                            std::string("6. Testy dla przegladu zupelnego.\n") +
-                            std::string("7. Testy dla Branch & Bound.\n") +
+                            std::string("6. Wykonaj algorytm Tabu Search.\n") +
+                            std::string("7. Ustaw parametry dla Tabu Search.\n") +
+                            std::string("8. Testy dla Tabu Search.\n") +
                             std::string("0. Wyjscie.\n\n") +
                             std::string("Wybor: "));
 
@@ -23,12 +24,8 @@ int main()
     while(application.getCurrentMenuSelection() != '0')
     {
         application.printMenu();
-
-        if(application.readMenuSelection())
-        {
-            application.getSelectedAction()->init(application.graph);
-            application.getSelectedAction()->run();
-        }
+        application.readMenuSelection();
+        application.run();
     }
 
     return 0;

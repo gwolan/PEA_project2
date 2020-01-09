@@ -2,8 +2,9 @@
 
 
 ApplicationFacade::ApplicationFacade(const std::string& menuContent)
-    : ioHandler(menuContent)
-    , graph(nullptr)
+    : graph(nullptr)
+    , ioHandler(menuContent)
+    , actionStrategy(graph)
 { }
 
 void ApplicationFacade::printMenu()
@@ -21,7 +22,10 @@ char ApplicationFacade::getCurrentMenuSelection()
     return ioHandler.getCurrentMenuSelection();
 }
 
-BaseAction* ApplicationFacade::getSelectedAction()
+void ApplicationFacade::run()
 {
-    return ioHandler.getSelectedAction();
+    if(actionStrategy.selectAction(ioHandler.getCurrentMenuSelection()))
+    {
+        actionStrategy.executeAction();
+    }
 }

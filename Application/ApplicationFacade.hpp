@@ -2,8 +2,9 @@
 
 #include <string>
 #include <memory>
-#include <Application/Menu/IOhandler.hpp>
 #include <Graph/GraphMatrix.hpp>
+#include <Application/Menu/IOhandler.hpp>
+#include <Application/Menu/ActionStrategy.hpp>
 
 
 class ApplicationFacade
@@ -12,13 +13,14 @@ class ApplicationFacade
     ApplicationFacade(const std::string& menuContent);
     ~ApplicationFacade() = default;
 
+    void run();
     void printMenu();
     bool readMenuSelection();
     char getCurrentMenuSelection();
-    BaseAction* getSelectedAction();
 
-    std::unique_ptr<GraphMatrix> graph;
 
     private:
     IOhandler ioHandler;
+    ActionStrategy actionStrategy;
+    std::unique_ptr<GraphMatrix> graph;
 };
