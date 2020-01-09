@@ -1,13 +1,13 @@
 #include <iostream>
-#include <Menu/IOhandler.hpp>
-#include <Menu/Actions/ExitProgram.hpp>
-#include <Menu/Actions/ReadGraphFromFile.hpp>
-#include <Menu/Actions/DisplayGraph.hpp>
-#include <Menu/Actions/GenerateRandomGraph.hpp>
-#include <Menu/Actions/PerformBruteForce.hpp>
-#include <Menu/Actions/PerformBranchAndBound.hpp>
-#include <Menu/Actions/MeasureBruteForce.hpp>
-#include <Menu/Actions/MeasureBranchAndBound.hpp>
+#include <Application/Menu/IOhandler.hpp>
+#include <Application/Menu/Actions/ExitProgram.hpp>
+#include <Application/Menu/Actions/ReadGraphFromFile.hpp>
+#include <Application/Menu/Actions/DisplayGraph.hpp>
+#include <Application/Menu/Actions/GenerateRandomGraph.hpp>
+#include <Application/Menu/Actions/PerformBruteForce.hpp>
+#include <Application/Menu/Actions/PerformBranchAndBound.hpp>
+#include <Application/Menu/Actions/MeasureBruteForce.hpp>
+#include <Application/Menu/Actions/MeasureBranchAndBound.hpp>
 
 
 IOhandler::IOhandler(const std::string& menuContent)
