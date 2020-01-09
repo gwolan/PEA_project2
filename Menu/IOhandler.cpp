@@ -1,6 +1,13 @@
 #include <iostream>
 #include <Menu/IOhandler.hpp>
 #include <Menu/Actions/ExitProgram.hpp>
+#include <Menu/Actions/ReadGraphFromFile.hpp>
+#include <Menu/Actions/DisplayGraph.hpp>
+#include <Menu/Actions/GenerateRandomGraph.hpp>
+#include <Menu/Actions/PerformBruteForce.hpp>
+#include <Menu/Actions/PerformBranchAndBound.hpp>
+#include <Menu/Actions/MeasureBruteForce.hpp>
+#include <Menu/Actions/MeasureBranchAndBound.hpp>
 
 
 IOhandler::IOhandler(const std::string& menuContent)
@@ -42,30 +49,37 @@ bool IOhandler::validateInput()
         break;
         case '1':
         {
+            selectedAction = std::make_unique<ReadGraphFromFile>("Wczytanie grafu z pliku");
         }
         break;
         case '2':
         {
+            selectedAction = std::make_unique<GenerateRandomGraph>("Wygenerowanie losowego grafu");
         }
         break;
         case '3':
         {
+            selectedAction = std::make_unique<DisplayGraph>("Wyświetlenie grafu (macierz sasiedztwa)");
         }
         break;
         case '4':
         {
+            selectedAction = std::make_unique<PerformBruteForce>("Wykonanie przeglądu zupelnego metoda Brute Force");
         }
         break;
         case '5':
         {
+            selectedAction = std::make_unique<PerformBranchAndBound>("Znalezienie optymalnej sciezki algorytmem B&B");
         }
         break;
         case '6':
         {
+            selectedAction = std::make_unique<MeasureBruteForce>("Pomiary dla przegladu zupelnego");
         }
         break;
         case '7':
         {
+            selectedAction = std::make_unique<MeasureBranchAndBound>("Pomiary dla Branch&Bound");
         }
         break;
         default:
