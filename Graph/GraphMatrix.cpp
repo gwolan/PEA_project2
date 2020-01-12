@@ -3,8 +3,8 @@
 
 
 GraphMatrix::GraphMatrix(uint32_t verticies)
+    : vertexCount(verticies)
 {
-    vertexCount = verticies;
     initializeEmptyMatrix();
 }
 

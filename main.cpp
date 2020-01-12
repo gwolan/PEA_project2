@@ -4,7 +4,7 @@
 int main()
 {
     std::string menuContent(std::string("\n====================\n") +
-                            std::string("PEA Projekt nr 1: Travelling Salesman Problem\n") +
+                            std::string("PEA Projekt nr 2: Travelling Salesman Problem\n") +
                             std::string("Autor: Grzegorz Wolanski\n\n") +
                             std::string("Menu:\n") +
                             std::string("1. Wczytaj graf z pliku.\n") +
