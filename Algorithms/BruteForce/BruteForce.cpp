@@ -1,6 +1,6 @@
 #include <algorithm>
 #include <numeric>
-#include <Algorithms/BruteForce.hpp>
+#include <Algorithms/BruteForce/BruteForce.hpp>
 #include <Graph/GraphMatrix.hpp>
 
 

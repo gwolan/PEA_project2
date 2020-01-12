@@ -4,7 +4,7 @@
 #include <memory>
 #include <cstdint>
 #include <queue>
-#include <Algorithms/Utils/GreaterPathComparator.hpp>
+#include <Algorithms/BranchAndBound/Utils/GreaterPathComparator.hpp>
 
 
 class GraphMatrix;

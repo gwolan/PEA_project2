@@ -2,7 +2,7 @@
 
 #include <memory>
 #include <Application/Menu/Actions/BaseAction.hpp>
-#include <Algorithms/BranchAndBound.hpp>
+#include <Algorithms/BranchAndBound/BranchAndBound.hpp>
 #include <Miscellanous/Timer.hpp>
 
 

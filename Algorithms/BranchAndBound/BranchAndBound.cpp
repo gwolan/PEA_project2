@@ -1,6 +1,6 @@
 #include <numeric>
 #include <algorithm>
-#include <Algorithms/BranchAndBound.hpp>
+#include <Algorithms/BranchAndBound/BranchAndBound.hpp>
 #include <Graph/GraphMatrix.hpp>
 
 

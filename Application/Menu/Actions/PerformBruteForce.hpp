@@ -2,7 +2,7 @@
 
 #include <memory>
 #include <Application/Menu/Actions/BaseAction.hpp>
-#include <Algorithms/BruteForce.hpp>
+#include <Algorithms/BruteForce/BruteForce.hpp>
 #include <Miscellanous/Timer.hpp>
 
 

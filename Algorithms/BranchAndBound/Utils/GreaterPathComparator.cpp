@@ -1,4 +1,4 @@
-#include <Algorithms/Utils/GreaterPathComparator.hpp>
+#include <Algorithms/BranchAndBound/Utils/GreaterPathComparator.hpp>
 
 
 bool GreaterPathComparator::operator()(const std::vector<uint32_t>& lhs,
