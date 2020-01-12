@@ -21,3 +21,8 @@ bool IOhandler::readMenuSelection()
 {
     std::cin >> currentSelection;
 }
+
+void IOhandler::setMenuContent(const std::string& menuContent)
+{
+    menu = menuContent;
+}

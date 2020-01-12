@@ -12,9 +12,10 @@ class IOhandler
     void printMenu();
     bool readMenuSelection();
     char getCurrentMenuSelection();
+    void setMenuContent(const std::string& menuContent);
 
 
     private:
     char currentSelection;
-    const std::string menu;
+    std::string menu;
 };

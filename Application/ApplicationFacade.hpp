@@ -5,6 +5,7 @@
 #include <Graph/GraphMatrix.hpp>
 #include <Application/Menu/IOhandler.hpp>
 #include <Application/Menu/ActionStrategy.hpp>
+#include <Algorithms/TabuSearch/Utils/TabuConfiguration.hpp>
 
 
 class ApplicationFacade
@@ -20,7 +21,8 @@ class ApplicationFacade
 
 
     private:
-    IOhandler ioHandler;
-    ActionStrategy actionStrategy;
     std::unique_ptr<GraphMatrix> graph;
+    IOhandler ioHandler;
+    TabuConfiguration tabuConfiguration;
+    ActionStrategy actionStrategy;
 };

@@ -4,7 +4,8 @@
 ApplicationFacade::ApplicationFacade(const std::string& menuContent)
     : graph(nullptr)
     , ioHandler(menuContent)
-    , actionStrategy(graph)
+    , tabuConfiguration()
+    , actionStrategy(graph, tabuConfiguration)
 { }
 
 void ApplicationFacade::printMenu()

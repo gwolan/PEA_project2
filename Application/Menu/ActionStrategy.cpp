@@ -6,11 +6,13 @@
 #include <Application/Menu/Actions/GenerateRandomGraph.hpp>
 #include <Application/Menu/Actions/PerformBruteForce.hpp>
 #include <Application/Menu/Actions/PerformBranchAndBound.hpp>
+#include <Application/Menu/Actions/ModifyTabuConfiguration.hpp>
 
 
-ActionStrategy::ActionStrategy(std::unique_ptr<GraphMatrix>& graphMatrix)
+ActionStrategy::ActionStrategy(std::unique_ptr<GraphMatrix>& graphMatrix, TabuConfiguration& tabuConfig)
     : graph(graphMatrix)
     , selectedAction(nullptr)
+    , tabuConfiguration(tabuConfig)
 { }
 
 void ActionStrategy::executeAction()
@@ -59,6 +61,7 @@ bool ActionStrategy::selectAction(char selection)
         break;
         case '7':
         {
+            selectedAction = std::make_unique<ModifyTabuConfiguration>("Konfiguracja Tabu Search", tabuConfiguration);
         }
         break;
         case '8':
