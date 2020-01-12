@@ -1,8 +1,8 @@
 #pragma once
 
-#include <fstream>
 #include <memory>
 #include <Application/Menu/Actions/BaseAction.hpp>
+#include <Miscellanous/TSPLIBparser.hpp>
 
 
 class GraphMatrix;
@@ -18,12 +18,9 @@ class ReadGraphFromFile : public BaseAction
 
 
     private:
-    void readVertexCountIfPossible();
-    uint32_t readWeight();
     void fillGraphAdjacencyMatrix();
 
     std::unique_ptr<GraphMatrix>* graph;
-    std::string tspDataFileContent;
-    std::ifstream tspDataFile;
-    uint32_t vertexCount;
+    TSPLIBparser parser;
+    std::string fileName;
 };
