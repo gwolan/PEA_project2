@@ -3,13 +3,13 @@
 
 // default values for Tabu Search algorithm
 TabuConfiguration::TabuConfiguration()
-    : tabuInterval(60)
+    : tabuInterval(60.0)
     , tabuDiversification(true)
     , tabuNumberOfIterations(10000)
     , tabuCadencyLength(0)
 { }
 
-void TabuConfiguration::setTabuInterval(uint32_t intervalInSeconds)
+void TabuConfiguration::setTabuInterval(double intervalInSeconds)
 {
     tabuInterval = intervalInSeconds;
 }
@@ -34,22 +34,22 @@ void TabuConfiguration::setTabuCadencyLength(uint32_t cadency)
     tabuCadencyLength = cadency;
 }
 
-bool TabuConfiguration::isDiversificationEnabled()
+bool TabuConfiguration::isDiversificationEnabled() const
 {
     return tabuDiversification;
 }
 
-uint32_t TabuConfiguration::getTabuInterval()
+double TabuConfiguration::getTabuInterval() const
 {
     return tabuInterval;
 }
 
-uint32_t TabuConfiguration::getNumberOfIterations()
+uint32_t TabuConfiguration::getNumberOfIterations() const
 {
     return tabuNumberOfIterations;
 }
 
-uint32_t TabuConfiguration::getCadencyLength()
+uint32_t TabuConfiguration::getCadencyLength() const
 {
     return tabuCadencyLength;
 }

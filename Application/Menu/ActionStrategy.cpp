@@ -7,6 +7,7 @@
 #include <Application/Menu/Actions/PerformBruteForce.hpp>
 #include <Application/Menu/Actions/PerformBranchAndBound.hpp>
 #include <Application/Menu/Actions/ModifyTabuConfiguration.hpp>
+#include <Application/Menu/Actions/PerformTabuSearch.hpp>
 
 
 ActionStrategy::ActionStrategy(std::unique_ptr<GraphMatrix>& graphMatrix, TabuConfiguration& tabuConfig)
@@ -57,6 +58,7 @@ bool ActionStrategy::selectAction(char selection)
         break;
         case '6':
         {
+            selectedAction = std::make_unique<PerformTabuSearch>("Znalezienie optymalnej sciezki algorytmem Tabu Search", tabuConfiguration);
         }
         break;
         case '7':

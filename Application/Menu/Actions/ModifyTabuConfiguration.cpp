@@ -104,7 +104,7 @@ void ModifyTabuConfiguration::setCadency()
 
 void ModifyTabuConfiguration::setTabuInterval()
 {
-    uint32_t newInterval = 0;
+    double newInterval = 0.0;
 
     std::cout << "Podaj czas dzialania algorytmu [s]: ";
     std::cin >> newInterval;
@@ -118,7 +118,7 @@ void ModifyTabuConfiguration::drawSubMenu()
     std::string optionOne(       "1. Zmien dywersyfikacje: " + std::string(tabuConfiguration.isDiversificationEnabled() ? "Wlaczona\n" : "Wylaczona\n"));
     std::string optionTwo(       "2. Ustaw kryterium dywersyfikacji: " + std::to_string(tabuConfiguration.getNumberOfIterations()) + " iteracji\n");
     std::string optionThree(     "3. Ustaw kadencje na liście Tabu (0 - ustawienia automatyczne): " + std::to_string(tabuConfiguration.getCadencyLength()) + std::string("\n"));
-    std::string optionFour(      "4. Ustaw czas zatrzymania algorytmu: " + std::to_string(tabuConfiguration.getTabuInterval()) + std::string("\n"));
+    std::string optionFour(      "4. Ustaw czas zatrzymania algorytmu [s]: " + std::to_string(tabuConfiguration.getTabuInterval()) + std::string("\n"));
     std::string returnToMainMenu("0. Powrot do menu glownego\n");
     std::string selection(       "Wybor: ");
 
