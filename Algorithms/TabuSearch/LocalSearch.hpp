@@ -7,13 +7,14 @@
 
 class GraphMatrix;
 
-class GreedyLocalSearch
+class LocalSearch
 {
     public:
-    GreedyLocalSearch();
-    ~GreedyLocalSearch() = default;
+    LocalSearch();
+    ~LocalSearch() = default;
 
-    std::vector<uint32_t> findStartingPathGreedyStyle(std::unique_ptr<GraphMatrix>& graphMatrix, uint32_t startingVertex);
+    std::vector<uint32_t> findStartingPathGreedyStyle(std::unique_ptr<GraphMatrix>& graphMatrix);
+    std::vector<uint32_t> findStartingPathRandomly(std::unique_ptr<GraphMatrix>& graphMatrix);
 
 
     private:
@@ -21,5 +22,5 @@ class GreedyLocalSearch
     bool wasVertexAlreadyChecked(Iterator begin, Iterator end, const uint32_t vertex);
     bool isGivenEdgePromising(const uint32_t edgeWeight, const uint32_t upperBound);
 
-    const int32_t INFINITY;
+    const int32_t INFINITE_VALUE;
 };
