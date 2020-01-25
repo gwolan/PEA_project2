@@ -41,16 +41,16 @@ void PerformTabuSearch::run()
 
 uint32_t PerformTabuSearch::getTabuCadencyForGraph(const uint32_t verticiesCount)
 {
-    uint32_t tabuCadency = (2 * verticiesCount);// / 10) * 10;
+    uint32_t tabuCadency = ((2 * verticiesCount) / 10) * 10;
 
-    /*if(tabuCadency != 0)
+    if(tabuCadency != 0)
     {
         return tabuCadency;
     }
     else
     {
         return 10;
-    }*/
+    }
 }
 
 void PerformTabuSearch::printResults(const PerformTabuSearch::PathWithCost& result)

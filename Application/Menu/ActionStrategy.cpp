@@ -9,6 +9,7 @@
 #include <Application/Menu/Actions/PerformBranchAndBound.hpp>
 #include <Application/Menu/Actions/ModifyTabuConfiguration.hpp>
 #include <Application/Menu/Actions/PerformTabuSearch.hpp>
+#include <Application/Menu/Actions/MeasureTabuSearch.hpp>
 
 
 ActionStrategy::ActionStrategy(std::unique_ptr<GraphMatrix>& graphMatrix, TabuConfiguration& tabuConfig)
@@ -74,6 +75,7 @@ bool ActionStrategy::selectAction(char selection)
         break;
         case '9':
         {
+            selectedAction = std::make_unique<MeasureTabuSearch>("Pomiary dla Tabu Search");
         }
         break;
         default:
