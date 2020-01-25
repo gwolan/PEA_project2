@@ -7,7 +7,12 @@ struct TabuMove
 {
     TabuMove();
 
+    bool isEmpty();
+    bool operator==(const TabuMove& rhs);
+    bool operator!=(const TabuMove& rhs);
+
+
     uint32_t cadency;
-    uint32_t beginVertex;
-    uint32_t endVertex;
+    uint32_t vertexA;
+    uint32_t vertexB;
 };

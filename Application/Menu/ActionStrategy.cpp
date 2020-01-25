@@ -2,6 +2,7 @@
 #include <Application/Menu/ActionStrategy.hpp>
 #include <Application/Menu/Actions/ExitProgram.hpp>
 #include <Application/Menu/Actions/ReadGraphFromFile.hpp>
+#include <Application/Menu/Actions/ReadGraphFromTspLibFile.hpp>
 #include <Application/Menu/Actions/DisplayGraph.hpp>
 #include <Application/Menu/Actions/GenerateRandomGraph.hpp>
 #include <Application/Menu/Actions/PerformBruteForce.hpp>
@@ -38,35 +39,40 @@ bool ActionStrategy::selectAction(char selection)
         break;
         case '2':
         {
-            selectedAction = std::make_unique<GenerateRandomGraph>("Wygenerowanie losowego grafu");
+            selectedAction = std::make_unique<ReadGraphFromTspLibFile>("Wczytanie grafu z pliku TSPLIB");
         }
         break;
         case '3':
         {
-            selectedAction = std::make_unique<DisplayGraph>("Wyświetlenie grafu (macierz sasiedztwa)");
+            selectedAction = std::make_unique<GenerateRandomGraph>("Wygenerowanie losowego grafu");
         }
         break;
         case '4':
         {
-            selectedAction = std::make_unique<PerformBruteForce>("Wykonanie przeglądu zupelnego metoda Brute Force");
+            selectedAction = std::make_unique<DisplayGraph>("Wyświetlenie grafu (macierz sasiedztwa)");
         }
         break;
         case '5':
         {
-            selectedAction = std::make_unique<PerformBranchAndBound>("Znalezienie optymalnej sciezki algorytmem B&B");
+            selectedAction = std::make_unique<PerformBruteForce>("Wykonanie przeglądu zupelnego metoda Brute Force");
         }
         break;
         case '6':
         {
-            selectedAction = std::make_unique<PerformTabuSearch>("Znalezienie optymalnej sciezki algorytmem Tabu Search", tabuConfiguration);
+            selectedAction = std::make_unique<PerformBranchAndBound>("Znalezienie optymalnej sciezki algorytmem B&B");
         }
         break;
         case '7':
         {
-            selectedAction = std::make_unique<ModifyTabuConfiguration>("Konfiguracja Tabu Search", tabuConfiguration);
+            selectedAction = std::make_unique<PerformTabuSearch>("Znalezienie optymalnej sciezki algorytmem Tabu Search", tabuConfiguration);
         }
         break;
         case '8':
+        {
+            selectedAction = std::make_unique<ModifyTabuConfiguration>("Konfiguracja Tabu Search", tabuConfiguration);
+        }
+        break;
+        case '9':
         {
         }
         break;
