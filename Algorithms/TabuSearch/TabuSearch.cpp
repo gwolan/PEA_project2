@@ -110,7 +110,7 @@ void TabuSearch::assignNewBestSolutionIfPossible(PathWithCost& bestNeighbourhood
     {
         // intensify search in given area during next iteration
         // if recent search made an improvement to solution
-        if(bestNeighbourhood.first > bestSolution.first)
+        if(bestNeighbourhood.first < bestSolution.first)
         {
             enableIntesification();
         }
