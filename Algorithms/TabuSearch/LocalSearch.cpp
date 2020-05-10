@@ -90,5 +90,5 @@ bool LocalSearch::wasVertexAlreadyChecked(Iterator begin, Iterator end, const ui
 
 bool LocalSearch::isGivenEdgePromising(const uint32_t edgeWeight, const uint32_t upperBound)
 {
-    return (upperBound == INFINITE_VALUE) || (edgeWeight < upperBound);
+    return (upperBound == static_cast<uint32_t>(INFINITE_VALUE)) || (edgeWeight < upperBound);
 }

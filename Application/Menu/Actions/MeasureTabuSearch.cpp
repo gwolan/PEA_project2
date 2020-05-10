@@ -115,7 +115,7 @@ void MeasureTabuSearch::setTabuConfig(double tabuInterval, bool tabuDiversificat
 
 bool MeasureTabuSearch::isGivenPathPromising(const uint32_t currentCost, const uint32_t upperBound)
 {
-    return (upperBound == INFINITY) || (currentCost < upperBound);
+    return (upperBound == static_cast<uint32_t>(INFINITY)) || (currentCost < upperBound);
 }
 
 uint32_t MeasureTabuSearch::getTabuCadencyForGraph(const uint32_t verticiesCount)
@@ -135,7 +135,7 @@ uint32_t MeasureTabuSearch::getTabuCadencyForGraph(const uint32_t verticiesCount
 double MeasureTabuSearch::calculateRelativeError(uint32_t pathCost)
 {
     double pathCostAsDouble = static_cast<double>(pathCost);
-    return ((pathCost - problemOptimalResult) / problemOptimalResult) * 100.0;
+    return ((pathCostAsDouble - problemOptimalResult) / problemOptimalResult) * 100.0;
 }
 
 void MeasureTabuSearch::saveResultsToFile()

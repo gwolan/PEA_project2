@@ -225,7 +225,7 @@ bool TabuSearch::isAspirationCriteriaFulfilled(const std::vector<uint32_t>& neig
 
 bool TabuSearch::isCurrentNeighbourPathValid(const TabuSearch::PathWithCost& bestNeighbourhood)
 {
-    return bestNeighbourhood.first != INFINITY;
+    return bestNeighbourhood.first != static_cast<uint32_t>(INFINITY);
 }
 
 uint32_t TabuSearch::calculatePathsCost(const std::vector<uint32_t>& path)
@@ -248,7 +248,7 @@ uint32_t TabuSearch::calculatePathsCost(const std::vector<uint32_t>& path)
 
 bool TabuSearch::isGivenPathPromising(const uint32_t currentCost, const uint32_t upperBound)
 {
-    return (upperBound == INFINITY) || (currentCost < upperBound);
+    return (upperBound == static_cast<uint32_t>(INFINITY)) || (currentCost < upperBound);
 }
 
 void TabuSearch::updateTabuList(TabuMove& newTabuMove)

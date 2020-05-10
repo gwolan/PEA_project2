@@ -29,7 +29,7 @@ void ModifyTabuConfiguration::run()
     }
 }
 
-bool ModifyTabuConfiguration::handleMenuSelection(char selection)
+void ModifyTabuConfiguration::handleMenuSelection(char selection)
 {
     std::cout << std::endl;
 

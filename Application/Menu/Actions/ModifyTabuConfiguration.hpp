@@ -18,7 +18,7 @@ class ModifyTabuConfiguration : public BaseAction
 
 
     private:
-    bool handleMenuSelection(char selection);
+    void handleMenuSelection(char selection);
     void drawSubMenu();
     void setDiversification();
     void setDiversificationCriteria();
